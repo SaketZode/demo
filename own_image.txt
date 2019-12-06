@@ -1,0 +1,23 @@
+yum check-update
+yum -y install docker
+systemctl start docker
+systemctl status docker
+mkdir DockerImages
+cd DockerImages
+mkdir hello
+cd hello
+vi helloworld.cpp
+g++ helloworld.cpp -o helloworld
+./helloworld
+vi Dockerfile
+**********************Dockerfile**********************
+FROM ubuntu
+mkdir -p home/DockerImages/hello
+COPY . home/DockerImages/hello
+CMD /home/DockerImages/hello/helloworld
+
+
+cd ..
+docker build -t helloworld:Tag /hello
+
+docker run <image_id>

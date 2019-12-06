@@ -1,0 +1,24 @@
+apt-get install git-core / yum -y install git-core
+git config --global user.name "SaketZode"
+git config --global user.email saketzode@gmail.com
+git config --global branch.autosetuprebase always
+git config --global color.ui true
+git config --global color.status auto
+git config --global color.branch auto
+git config --list
+git init
+git status
+git add test1
+git commit
+git add test2
+git commit
+git remote add origin <repository-url>
+git pull origin master
+git push <remote>
+git branch
+git branch new_branch
+git checkout new_branch
+git add test3
+git commit
+git merge new_branch
+git push <repository-url>
